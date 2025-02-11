@@ -1,0 +1,6 @@
+.pytest_cache
+.vscode
+airflow/logs
+airflow/plugins
+venv
+airflow/dags/__pycache__
