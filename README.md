@@ -1,16 +1,30 @@
-# 📊 Monitoramento e Alertas para o Pipeline de Dados
+# 📊 Build da  Aplicação
 
-Este documento descreve a implementação de um sistema de **monitoramento e alerta** para um pipeline de dados no **Apache Airflow**, utilizando Docker.
+Siga os passos abaixo:
 
-## 🚀 Componentes do Monitoramento
+- Instale o Docker e Docker-Compose
 
-O processo de monitoramento é dividido em três partes principais:
+- git clone https://github.com/juliocms/airflow-postgress-spark-python.git
 
-1. **Monitoramento da Execução do Pipeline**
-2. **Monitoramento da Qualidade dos Dados**
-3. **Sistema de Alertas e Notificações**
+- cd airflow-postgress-spark-python
+
+- Por nao conseguir baixar via apt-get na image do docker, tive que colocar o jdk11 manualmente. Isso devido as dependencias do teste e airflow. Por isso, crie uma pasta chamada lib e baixo o pacote openlogic-openjdk-11.0.26+4-linux-x64.tar.gz para esta pasta. Busque no endereco https://www.openlogic.com/openjdk-downloads?field_java_parent_version_target_id=406&field_operating_system_target_id=426&field_architecture_target_id=391&field_java_package_target_id=396 
+
+- docker-compose up -d --build
+
+- se quiser verificar se os testes passaram digite "docker logs python -f". No final é exibida a porcentagem de testes que passaram.
+
+- O Airflow é o último a subir, pode verificar se quiser com o comando "docker logs airflow -f".
+
+- Abra o Browser e digite http://localhost:8081/login. Usuario e senha "admin" 
+
+- Startar o Airflow
+
+- Após a execução pare o docker compose com "docker-compose down -v"
 
 ---
+
+# 📊 Monitoramento e Alertas para o Pipeline de Dados
 
 ## 📌 1. Monitoramento da Execução do Pipeline
 
