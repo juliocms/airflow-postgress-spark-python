@@ -8,7 +8,7 @@ Siga os passos abaixo:
 
 - cd airflow-postgress-spark-python
 
-- Por nao conseguir baixar via apt-get na image do docker, tive que colocar o jdk11 manualmente. Isso devido as dependencias do teste e airflow. Por isso, crie uma pasta chamada lib e baixo o pacote openlogic-openjdk-11.0.26+4-linux-x64.tar.gz para esta pasta. Busque no endereco https://www.openlogic.com/openjdk-downloads?field_java_parent_version_target_id=406&field_operating_system_target_id=426&field_architecture_target_id=391&field_java_package_target_id=396 
+- Por nao conseguir baixar via apt-get na image do docker, tive que colocar o jdk11 manualmente. Isso devido as dependencias do teste e airflow. Por isso, crie uma pasta chamada lib e baixe o pacote openlogic-openjdk-11.0.26+4-linux-x64.tar.gz para esta pasta. Busque no endereco https://www.openlogic.com/openjdk-downloads?field_java_parent_version_target_id=406&field_operating_system_target_id=426&field_architecture_target_id=391&field_java_package_target_id=396 
 
 - docker-compose up -d --build
 
