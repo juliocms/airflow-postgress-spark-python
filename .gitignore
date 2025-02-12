@@ -4,3 +4,4 @@ airflow/logs
 airflow/plugins
 venv
 airflow/dags/__pycache__
+/lib

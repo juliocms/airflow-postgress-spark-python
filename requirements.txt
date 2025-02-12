@@ -1,0 +1,7 @@
+apache-airflow-providers-http
+apache-airflow
+requests
+pyspark
+boto3
+pytest
+mock

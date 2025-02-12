@@ -1,0 +1,17 @@
+FROM python:3.9-slim
+
+USER root
+
+WORKDIR /opt
+RUN mkdir -p /java11
+
+COPY /lib/openlogic-openjdk-11.0.26+4-linux-x64.tar.gz /opt/
+RUN tar -xvzf openlogic-openjdk-11.0.26+4-linux-x64.tar.gz && \
+    mv openlogic-openjdk-11.0.26+4-linux-x64 java11 && \
+    echo 'export JAVA_HOME=/opt/java11' >> /etc/profile && \
+    echo 'export PATH=$JAVA_HOME/bin:$PATH' >> /etc/profile
+
+COPY output/data/bronze/brewery/2025/02/breweries.json /app/airflow/tests
+
+ENV JAVA_HOME=/opt/java11
+ENV PATH=$JAVA_HOME/bin:$PATH
