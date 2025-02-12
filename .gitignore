@@ -7,3 +7,4 @@ airflow/dags/__pycache__
 /lib
 *.crc
 *.parquet
+airflow/tests/__pycache__
