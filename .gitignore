@@ -5,3 +5,5 @@ airflow/plugins
 venv
 airflow/dags/__pycache__
 /lib
+*.crc
+*.parquet
