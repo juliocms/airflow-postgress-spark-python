@@ -36,7 +36,8 @@ services:
     container_name: airflow
     restart: always
     depends_on:
-      - postgres
+      - postgres:
+          condition: service_healthy
     environment:
       - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
