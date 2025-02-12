@@ -6,7 +6,6 @@ from airflow.dags.brewery_process import (
     save_breweries_bronze_zone,
     save_breweries_silver_zone,
     save_breweries_gold_zone,
-    get_spark_session
 )
 from pyspark import SparkContext
 from unittest.mock import MagicMock, patch

@@ -4,7 +4,9 @@ USER root
 
 WORKDIR /opt
 
+RUN rm -rf /opt/java11/*
 COPY /lib/openlogic-openjdk-11.0.26+4-linux-x64.tar.gz /opt/
+
 RUN tar -xvzf openlogic-openjdk-11.0.26+4-linux-x64.tar.gz && \
     mv openlogic-openjdk-11.0.26+4-linux-x64 java11 && \
     echo 'export JAVA_HOME=/opt/java11' >> /etc/profile && \
